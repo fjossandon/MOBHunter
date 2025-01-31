@@ -29,7 +29,7 @@ use strict;
 use warnings;
 use File::Copy;
 use File::Path;
-use Bio::Root::Version 1.006925;
+use Bio::Root::Version 1.006924;
 use Bio::Seq;
 use Bio::Seq::RichSeq;
 use Bio::SeqIO;
