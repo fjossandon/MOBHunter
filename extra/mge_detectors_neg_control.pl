@@ -124,7 +124,7 @@ close $comb_gbk_obj->_fh;
 
 # Read prediction file to gather island data
 print "\nProgram\tSupport level\tTrue Pos\tFalse Pos\tTrue Neg\tFalse Neg\t"
-  . "Predictions\tSensitivity\tSpecificity\tAccuracy\t"
+  . "Predictions\tSensitivity\tSpecificity\tPrecision\tAccuracy\t"
   . "Matthews correlation coefficient\n";
 foreach my $prediction_gbk (@gbk_files) {
     my ($tool_name) = ( $prediction_gbk =~ m/([^.]+)\.gbk$/ );
@@ -245,6 +245,10 @@ foreach my $prediction_gbk (@gbk_files) {
           ( $true_neg + $false_pos == 0 )
           ? 0
           : ( $true_neg / ( $true_neg + $false_pos ) * 100 );
+        my $precision =
+          ( $true_pos + $false_pos == 0 )
+          ? 0
+          : ( $true_pos / ( $true_pos + $false_pos ) * 100 );
         my $accuracy = ( $true_pos + $true_neg ) / $total_data * 100;
 
         # Matthews correlation coefficient
@@ -264,12 +268,14 @@ foreach my $prediction_gbk (@gbk_files) {
         $sensitivity = sprintf( "%.3f", $sensitivity );
         $specificity = sprintf( "%.3f", $specificity );
         $accuracy    = sprintf( "%.3f", $accuracy );
+        $precision   = sprintf( "%.3f", $precision );
         $matthews_cc = sprintf( "%.3f", $matthews_cc );
 
         my $data_line = join( "\t",
             $tool_name,   $supp_level, $true_pos,    $false_pos,
             $true_neg,    $false_neg,  $predictions, $sensitivity,
-            $specificity, $accuracy,   $matthews_cc, );
+            $specificity, $precision,  $accuracy,    $matthews_cc,
+        );
         print "$data_line\n";
     }
 }
