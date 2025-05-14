@@ -64,10 +64,9 @@ https://doi.org/10.6084/m9.figshare.28464356
 # How to Cite
 
 If you use MOBHunter in your research, please cite our work as follows:
+https://doi.org/10.1093/nar/gkaf396
+> Rojas-Villalobos C†, Ossandon FJ†, Castillo-Vilcahuaman C, Sepúlveda-Rebolledo P, Castro-Salinas D, Zapata-Araya A, Arisan D, Perez-Acle T, Issotta F, Quatrini R*, Moya-Beltrán A*. MOBHunter: a data integration platform for identification and classification of mobile genetic elements in microbial genomes. Nucleic Acids Res. 2025 May 14:gkaf396. doi: 10.1093/nar/gkaf396. Epub ahead of print. PMID: 40366029.
 
-```
-Rojas-Villalobos, C.*, Ossandon, F. J.*, Castillo-Vilcahuaman, C., Sepúlveda-Rebolledo, P., Castro, D., Zapata, A., Arisan, D., Issotta, F., & Quatrini, R.†, Moya-Beltrán, A.†
-(2024). MOBHunter: A data integration platform for Mobile Genetic Elements identification in microbial genomes.
-* Co-first authors
-† Co-corresponding authors
-```
+†The first two authors should be regarded as Joint First Authors.
+
+*To whom correspondence should be addressed.
